@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Stats preview card component</title>
 
@@ -12,22 +16,47 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    h1, #hd{ font-family: "Lexend Deca", sans-serif; }
+    body{font-family: "Inter", sans-serif;}
   </style>
 </head>
-<body>
+<body class="h-screen w-screen flex flex-col justify-center items-center gap-6 font-[15px] text-gray-200 bg-[#090b1a] text-center md:text-left">
+    <div class="bg-[#1b1938] flex flex-col md:flex-row w-[80vw] min-h-fit rounded-lg overflow-hidden">
+        <div class="relative md:w-1/2 h-1/2 md:h-full w-full flex justify-center items-center">
+    <img src="./image-header-desktop.jpg" class="relative inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 w-full h-full bg-[#5c77db] opacity-60"></div>
+</div>
 
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        <div class="md:w-1/2 w-full p-4 flex flex-col gap-4">
+            <h1 class="text-3xl font-bold">Get <span class="text-[#5c77db]">insights</span> that help your business grow.</h1>
+            <p>
+                Discover the benefits of data analytics and make better decisions regarding revenue, customer 
   experience, and overall efficiency.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                <div class="flex flex-col items-center md:items-start">
+                    <span class="text-xl font-bold block" id="hd">10k+</span>
+                    <span class="block text-[12px] uppercase">companies</span>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-start">
+                    <span class="text-xl font-bold block" id="hd">314</span>
+                    <span class="block text-[12px] uppercase">templates</span>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-start">
+                    <span class="text-2xl font-bold block" id="hd">12m+</span>
+                    <span class="block text-[12px] uppercase">queries</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  10k+ companies
-  314 templates
-  12m+ queries
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
-</html>
+                      </html>
+                      
